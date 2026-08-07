@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Resume — Bharadwaj Y V N S</title>
+<meta name="description" content="Resume of Bharadwaj Y V N S." />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" href="style.css" />
+<script>
+  (function(){
+    var stored = localStorage.getItem("theme");
+    if (stored) document.documentElement.setAttribute("data-theme", stored);
+  })();
+</script>
+
+<style>
+  /* Entry = one degree / one job / one project */
+  .entry{
+    border:3px solid var(--line);
+    background:var(--panel);
+    box-shadow:5px 5px 0 var(--shadow);
+    padding:20px;
+    margin-bottom:20px;
+  }
+  .entry:last-child{ margin-bottom:0; }
+
+  .entry-head{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:8px 16px;
+    margin-bottom:4px;
+  }
+
+  .entry-title{
+    margin:0;
+    font-size:16px;
+    font-weight:700;
+  }
+
+  .entry-period{
+    font-size:12px;
+    color:var(--muted);
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    white-space:nowrap;
+  }
+
+  .entry-sub{
+    margin:0 0 12px;
+    font-size:14px;
+    color:var(--muted);
+    font-style:italic;
+  }
+
+  .entry ul{
+    margin:0;
+    padding-left:20px;
+    font-size:14px;
+    line-height:1.6;
+  }
+  .entry li + li{ margin-top:6px; }
+  .entry li strong{ font-weight:700; }
+
+  /* Skills */
+  .skill-group{
+    border:3px solid var(--line);
+    background:var(--panel);
+    box-shadow:5px 5px 0 var(--shadow);
+    padding:18px 20px;
+    margin-bottom:16px;
+  }
+  .skill-group:last-child{ margin-bottom:0; }
+  .skill-group h3{
+    margin:0 0 8px;
+    font-size:16px;
+    font-weight:700;
+  }
+  .skill-group p{
+    margin:0;
+    font-size:14px;
+    color:var(--muted);
+  }
+
+  /* Chips: languages, courses tags */
+  .chip-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .chip{
+    font-size:13px;
+    font-weight:600;
+    border:2px solid var(--line);
+    padding:8px 14px;
+    background:var(--panel);
+  }
+
+  /* Course entries that link out to a public certificate */
+  a.entry-link{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+    cursor:pointer;
+    transition:transform 150ms ease, box-shadow 150ms ease;
+  }
+  a.entry-link:hover{
+    transform:translate(-2px,-2px);
+    box-shadow:7px 7px 0 var(--shadow);
+  }
+  a.entry-link:active{
+    transform:translate(1px,1px);
+    box-shadow:3px 3px 0 var(--shadow);
+  }
+
+  .entry-link-hint{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    margin-top:10px;
+    font-size:12px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    color:var(--muted);
+    transition:color 150ms ease;
+  }
+  .entry-link-hint .chevron-icon{
+    width:16px;
+    height:10px;
+    transition:transform 150ms ease;
+  }
+  a.entry-link:hover .entry-link-hint{
+    color:var(--ink);
+  }
+  a.entry-link:hover .entry-link-hint .chevron-icon{
+    transform:translate(4px,0);
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="site">
+    <div class="title-row">
+      <div class="pixel-mark" aria-hidden="true"></div>
+      <h1>RESUME</h1>
+    </div>
+    <p class="tagline">Bharadwaj Y V N S &mdash; MSc Autonomy Technologies student, data &amp; ML engineering background.</p>
+    <div class="contact-row">
+      <span class="contact-chip contact-chip--static">
+        <svg class="pixel-icon" viewBox="0 0 16 16" aria-hidden="true">
+          <rect x="6" y="2" width="4" height="1" fill="currentColor"/>
+          <rect x="5" y="3" width="6" height="1" fill="currentColor"/>
+          <rect x="4" y="4" width="8" height="1" fill="currentColor"/>
+          <rect x="4" y="5" width="8" height="1" fill="currentColor"/>
+          <rect x="5" y="6" width="6" height="1" fill="currentColor"/>
+          <rect x="6" y="7" width="4" height="1" fill="currentColor"/>
+          <rect x="6" y="8" width="4" height="1" fill="currentColor"/>
+          <rect x="7" y="9" width="2" height="1" fill="currentColor"/>
+          <rect x="7" y="10" width="2" height="1" fill="currentColor"/>
+        </svg>
+        Erlangen, Germany
+      </span>
+      <a class="contact-chip" href="mailto:ybharadwaj4@gmail.com">
+        <svg class="pixel-icon" viewBox="0 0 16 16" aria-hidden="true">
+          <rect x="1" y="3" width="13" height="1" fill="currentColor"/>
+          <rect x="1" y="12" width="13" height="1" fill="currentColor"/>
+          <rect x="1" y="3" width="1" height="10" fill="currentColor"/>
+          <rect x="13" y="3" width="1" height="10" fill="currentColor"/>
+          <rect x="2" y="4" width="1" height="1" fill="currentColor"/>
+          <rect x="3" y="5" width="1" height="1" fill="currentColor"/>
+          <rect x="4" y="6" width="1" height="1" fill="currentColor"/>
+          <rect x="5" y="7" width="1" height="1" fill="currentColor"/>
+          <rect x="6" y="8" width="1" height="1" fill="currentColor"/>
+          <rect x="12" y="4" width="1" height="1" fill="currentColor"/>
+          <rect x="11" y="5" width="1" height="1" fill="currentColor"/>
+          <rect x="10" y="6" width="1" height="1" fill="currentColor"/>
+          <rect x="9" y="7" width="1" height="1" fill="currentColor"/>
+          <rect x="8" y="8" width="1" height="1" fill="currentColor"/>
+        </svg>
+        Email
+      </a>
+      <a class="contact-chip" href="https://linkedin.com/in/yvnsbharadwaj" target="_blank" rel="noopener noreferrer">
+        <svg class="pixel-icon" viewBox="0 0 16 16" aria-hidden="true">
+          <rect x="3" y="4" width="2" height="2" fill="currentColor"/>
+          <rect x="3" y="7" width="2" height="5" fill="currentColor"/>
+          <rect x="8" y="7" width="2" height="5" fill="currentColor"/>
+          <rect x="8" y="7" width="6" height="2" fill="currentColor"/>
+          <rect x="12" y="7" width="2" height="5" fill="currentColor"/>
+        </svg>
+        LinkedIn
+      </a>
+      <a class="contact-chip" href="https://github.com/r3tr0devilz" target="_blank" rel="noopener noreferrer">
+        <svg class="pixel-icon" viewBox="0 0 16 16" aria-hidden="true">
+          <rect x="4" y="2" width="1" height="1" fill="currentColor"/>
+          <rect x="11" y="2" width="1" height="1" fill="currentColor"/>
+          <rect x="4" y="3" width="2" height="1" fill="currentColor"/>
+          <rect x="10" y="3" width="2" height="1" fill="currentColor"/>
+          <rect x="6" y="4" width="4" height="1" fill="currentColor"/>
+          <rect x="5" y="5" width="6" height="1" fill="currentColor"/>
+          <rect x="4" y="6" width="8" height="1" fill="currentColor"/>
+          <rect x="4" y="7" width="8" height="1" fill="currentColor"/>
+          <rect x="4" y="8" width="8" height="1" fill="currentColor"/>
+          <rect x="4" y="9" width="8" height="1" fill="currentColor"/>
+          <rect x="5" y="10" width="6" height="1" fill="currentColor"/>
+          <rect x="6" y="11" width="4" height="1" fill="currentColor"/>
+        </svg>
+        GitHub
+      </a>
+    </div>
+    <nav class="site-nav" aria-label="Site">
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="certifications.html">Certifications</a>
+        <a class="nav-link" href="resume.html" aria-current="page">Resume</a>
+      </div>
+      <div class="nav-actions">
+        <button type="button" class="download-btn" id="download-btn">
+          <svg class="pixel-icon" viewBox="0 0 16 16" aria-hidden="true">
+            <rect x="7" y="1" width="2" height="6" fill="currentColor"/>
+            <rect x="5" y="6" width="2" height="2" fill="currentColor"/>
+            <rect x="9" y="6" width="2" height="2" fill="currentColor"/>
+            <rect x="7" y="8" width="2" height="2" fill="currentColor"/>
+            <rect x="2" y="10" width="2" height="2" fill="currentColor"/>
+            <rect x="12" y="10" width="2" height="2" fill="currentColor"/>
+            <rect x="2" y="12" width="12" height="2" fill="currentColor"/>
+          </svg>
+          <span id="download-btn-label" aria-live="polite">Download PDF</span>
+        </button>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Switch to dark mode">
+          <svg class="pixel-icon theme-icon theme-icon--moon" viewBox="0 0 16 16" aria-hidden="true">
+            <rect x="6" y="4" width="4" height="1" fill="currentColor"/>
+            <rect x="5" y="5" width="6" height="1" fill="currentColor"/>
+            <rect x="4" y="6" width="8" height="1" fill="currentColor"/>
+            <rect x="4" y="7" width="8" height="1" fill="currentColor"/>
+            <rect x="4" y="8" width="8" height="1" fill="currentColor"/>
+            <rect x="4" y="9" width="8" height="1" fill="currentColor"/>
+            <rect x="5" y="10" width="6" height="1" fill="currentColor"/>
+            <rect x="6" y="11" width="4" height="1" fill="currentColor"/>
+            <rect class="cut" x="8" y="3" width="3" height="1"/>
+            <rect class="cut" x="7" y="4" width="5" height="1"/>
+            <rect class="cut" x="7" y="5" width="5" height="1"/>
+            <rect class="cut" x="7" y="6" width="5" height="1"/>
+            <rect class="cut" x="8" y="7" width="3" height="1"/>
+          </svg>
+          <svg class="pixel-icon theme-icon theme-icon--sun" viewBox="0 0 16 16" aria-hidden="true">
+            <rect x="6" y="4" width="4" height="1" fill="currentColor"/>
+            <rect x="5" y="5" width="6" height="1" fill="currentColor"/>
+            <rect x="4" y="6" width="8" height="1" fill="currentColor"/>
+            <rect x="4" y="7" width="8" height="1" fill="currentColor"/>
+            <rect x="4" y="8" width="8" height="1" fill="currentColor"/>
+            <rect x="4" y="9" width="8" height="1" fill="currentColor"/>
+            <rect x="5" y="10" width="6" height="1" fill="currentColor"/>
+            <rect x="6" y="11" width="4" height="1" fill="currentColor"/>
+            <rect x="7" y="0" width="2" height="2" fill="currentColor"/>
+            <rect x="7" y="14" width="2" height="2" fill="currentColor"/>
+            <rect x="0" y="7" width="2" height="2" fill="currentColor"/>
+            <rect x="14" y="7" width="2" height="2" fill="currentColor"/>
+            <rect x="2" y="2" width="2" height="2" fill="currentColor"/>
+            <rect x="12" y="2" width="2" height="2" fill="currentColor"/>
+            <rect x="2" y="12" width="2" height="2" fill="currentColor"/>
+            <rect x="12" y="12" width="2" height="2" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-section" aria-labelledby="education-heading">
+      <h2 class="section-heading" id="education-heading">Education</h2>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3 class="entry-title">MSc in Autonomy Technologies</h3>
+          <span class="entry-period">04/2024 &ndash; present</span>
+        </div>
+        <p class="entry-sub">Friedrich-Alexander-Universit&auml;t Erlangen-N&uuml;rnberg &middot; Erlangen, Germany</p>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3 class="entry-title">BTech in Electronics and Communication Engineering</h3>
+          <span class="entry-period">09/2018 &ndash; 02/2023</span>
+        </div>
+        <p class="entry-sub">Christ (Deemed to Be University) &middot; Bengaluru, India</p>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3 class="entry-title">BSc(Engg) in Electronics Engineering <span style="font-weight:400;">(Dual Degree Exchange Program)</span></h3>
+          <span class="entry-period">09/2020 &ndash; 08/2022</span>
+        </div>
+        <p class="entry-sub">Kyungpook National University &middot; Daegu, South Korea</p>
+      </article>
+    </section>
+
+    <section class="page-section" aria-labelledby="skills-heading">
+      <h2 class="section-heading" id="skills-heading">Skills</h2>
+
+      <div class="skill-group">
+        <h3>Programming &amp; Data Engineering</h3>
+        <p>Python, MATLAB, C, Arduino/C++, SQL, Pandas, NumPy, Matplotlib, Seaborn, Selenium, Office Scripts, ETL/ELT Workflows, Data Integration, Data Quality Enhancement, SAP Data, Snowflake, SharePoint</p>
+      </div>
+      <div class="skill-group">
+        <h3>AI &amp; Machine Learning</h3>
+        <p>NLP, Deep Learning, TensorFlow, Keras, PyTorch, Scikit-Learn</p>
+      </div>
+      <div class="skill-group">
+        <h3>Business Intelligence &amp; Enterprise Tools</h3>
+        <p>Power BI, Tableau, Excel, ServiceNow, SharePoint, Microsoft Office, PowerAutomate, PowerApps</p>
+      </div>
+      <div class="skill-group">
+        <h3>Development &amp; AI Tools</h3>
+        <p>Git, VS Code, Jupyter, Linux, GitHub Copilot, Claude, Ollama, Cursor</p>
+      </div>
+      <div class="skill-group">
+        <h3>Delivery &amp; Collaboration</h3>
+        <p>Requirements Gathering, User Stories, Acceptance Criteria, Agile Collaboration, Cross-functional Communication</p>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="experience-heading">
+      <h2 class="section-heading" id="experience-heading">Professional Experience</h2>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3 class="entry-title">Data Management &ndash; Working Student</h3>
+          <span class="entry-period">10/2024 &ndash; present</span>
+        </div>
+        <p class="entry-sub">Siemens Healthineers &middot; Erlangen, Germany</p>
+        <ul>
+          <li>Built <strong>Python/Selenium automation workflows</strong> to extract operational data and support Power BI dashboards for ticket performance, case duration, team analytics, and customer segmentation.</li>
+          <li>Worked with <strong>SAP certification data</strong>, including BIS certificate expiry tracking, and automated monthly Excel-based reporting for stakeholders via Office Scripts and Yespress newsletter.</li>
+          <li>Supported <strong>Global Certification Service (GCS) data ingestion into Snowflake</strong> by gathering data requirements, aligning with data owners, and coordinating data-privacy approvals.</li>
+          <li>Cleaned and prepared <strong>ServiceNow/SAP-related datasets</strong> for downstream analytics and Power BI reporting.</li>
+          <li>Collaborated with ServiceNow AI engineering and business stakeholders to scope <strong>AI/automation use cases</strong> for internal operational workflows.</li>
+          <li>Created <strong>requirements, user stories, and acceptance criteria</strong> for ServiceNow ticketing-system enhancements.</li>
+          <li>Used AI-assisted development tools such as <strong>Ollama, GitHub Copilot, and Claude</strong> to speed up prototyping and automation delivery.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3 class="entry-title">Data &amp; ML Engineer Intern</h3>
+          <span class="entry-period">04/2021 &ndash; 03/2022</span>
+        </div>
+        <p class="entry-sub">KNU High Energy Physics Lab &middot; Daegu, South Korea</p>
+        <ul>
+          <li>Designed and optimized Python tools for fast data extraction and data cleaning that <strong>improved dataset quality by 10%</strong>.</li>
+          <li>Developed and deployed deep neural networks (DNNs) and artificial neural networks (ANNs) for classification tasks, reaching <strong>93.75% accuracy</strong> with datasets containing over <strong>50 million records</strong>.</li>
+          <li>Introduced advanced standardization techniques that enhanced model interpretability and consistency, improving predictive accuracy across <strong>50M+ high-energy physics data points</strong>.</li>
+          <li>Streamlined data processing with advanced data visualization techniques, <strong>reducing unnecessary data points by 20%</strong>.</li>
+          <li>Established a collaborative framework with five research team members, <strong>bolstering accuracy by 15%</strong>.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3 class="entry-title">Summer Intern</h3>
+          <span class="entry-period">04/2020 &ndash; 05/2020</span>
+        </div>
+        <p class="entry-sub">FESTO Industrial Automation &middot; Bengaluru, India</p>
+        <ul>
+          <li>Planned industrial automation solutions with <strong>CIROS 3D</strong> toward optimized production processes of beverage bottling and candy bar manufacturing.</li>
+          <li>Simulated and modeled systems with <strong>ladder programming in CIROS</strong>, leading to improvements in operational efficiency.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="page-section" aria-labelledby="projects-heading">
+      <h2 class="section-heading" id="projects-heading">Projects</h2>
+
+      <article class="entry">
+        <h3 class="entry-title">Twitter-Based Disaster Alert System</h3>
+        <ul>
+          <li>Implemented a real-time disaster alert system leveraging Twitter data to notify users of impending disasters.</li>
+          <li>Created a bag-of-words model to scan and classify <strong>10,000 Twitter posts within 30 seconds</strong> for disaster-related content.</li>
+          <li>Managed project tasks using Agile-based sprints, leading to a <strong>15&ndash;25% improvement in development speed</strong>.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <h3 class="entry-title">IoT-based ALU Design for Router Applications</h3>
+        <ul>
+          <li>Designed a fully synthesizable <strong>16-bit ALU</strong> for router-based IoT applications, supporting arithmetic operations plus router-specific functions such as AND, OR, NOT, and Base64 encoding.</li>
+          <li>Executed synthesis and netlisting for <strong>32nm High Voltage Threshold (HVT) cells</strong>, optimizing the ALU for performance in IoT environments.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <h3 class="entry-title">Karma &mdash; The LifeSaver: IoT-based Gas Leak Detector</h3>
+        <ul>
+          <li>Built a low-cost IoT-based gas leak detector with <strong>Blynk platform</strong> integration for real-time leak notifications.</li>
+          <li>Engineered automated responses that switch ventilators and electrical flow on/off based on detected gas levels, protecting users without manual intervention.</li>
+          <li><strong>Won first prize at the Engineer's Day event</strong> for an innovative, safety-critical application of IoT.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="page-section" aria-labelledby="languages-heading">
+      <h2 class="section-heading" id="languages-heading">Languages</h2>
+      <div class="chip-row">
+        <span class="chip">English (C1)</span>
+        <span class="chip">Hindi (Native)</span>
+        <span class="chip">Telugu (Native)</span>
+        <span class="chip">German (A2)</span>
+        <span class="chip">Korean (A1)</span>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="courses-heading">
+      <h2 class="section-heading" id="courses-heading">Courses</h2>
+
+      <a class="entry entry-link" href="https://www.coursera.org/account/accomplishments/specialization/certificate/QWCP2YTS3V5A" target="_blank" rel="noopener noreferrer">
+        <h3 class="entry-title">Data Science Specialization (10 Courses)</h3>
+        <p class="entry-sub">IBM</p>
+        <span class="entry-link-hint">
+          View Certificate
+          <svg class="chevron-icon" viewBox="0 0 8 5" aria-hidden="true">
+            <rect x="0" y="0" width="1" height="1" fill="currentColor"/>
+            <rect x="1" y="1" width="1" height="1" fill="currentColor"/>
+            <rect x="2" y="2" width="1" height="1" fill="currentColor"/>
+            <rect x="1" y="3" width="1" height="1" fill="currentColor"/>
+            <rect x="0" y="4" width="1" height="1" fill="currentColor"/>
+            <rect x="4" y="0" width="1" height="1" fill="currentColor"/>
+            <rect x="5" y="1" width="1" height="1" fill="currentColor"/>
+            <rect x="6" y="2" width="1" height="1" fill="currentColor"/>
+            <rect x="5" y="3" width="1" height="1" fill="currentColor"/>
+            <rect x="4" y="4" width="1" height="1" fill="currentColor"/>
+          </svg>
+        </span>
+      </a>
+      <a class="entry entry-link" href="https://www.coursera.org/account/accomplishments/specialization/certificate/N5SLT748HTHM" target="_blank" rel="noopener noreferrer">
+        <h3 class="entry-title">Developing Industrial Internet of Things Specialization (3 Courses)</h3>
+        <p class="entry-sub">University of Colorado Boulder</p>
+        <span class="entry-link-hint">
+          View Certificate
+          <svg class="chevron-icon" viewBox="0 0 8 5" aria-hidden="true">
+            <rect x="0" y="0" width="1" height="1" fill="currentColor"/>
+            <rect x="1" y="1" width="1" height="1" fill="currentColor"/>
+            <rect x="2" y="2" width="1" height="1" fill="currentColor"/>
+            <rect x="1" y="3" width="1" height="1" fill="currentColor"/>
+            <rect x="0" y="4" width="1" height="1" fill="currentColor"/>
+            <rect x="4" y="0" width="1" height="1" fill="currentColor"/>
+            <rect x="5" y="1" width="1" height="1" fill="currentColor"/>
+            <rect x="6" y="2" width="1" height="1" fill="currentColor"/>
+            <rect x="5" y="3" width="1" height="1" fill="currentColor"/>
+            <rect x="4" y="4" width="1" height="1" fill="currentColor"/>
+          </svg>
+        </span>
+      </a>
+      <article class="entry">
+        <h3 class="entry-title">Introduction to Programming using Python</h3>
+        <p class="entry-sub">Microsoft Technology Associate &middot; Certiport ID: 90075341</p>
+      </article>
+      <a class="entry entry-link" href="https://coursera.org/share/e7b74495200c30efc3f31c9ba34a0d2a" target="_blank" rel="noopener noreferrer">
+        <h3 class="entry-title">Introduction to Statistics</h3>
+        <p class="entry-sub">Stanford University</p>
+        <span class="entry-link-hint">
+          View Certificate
+          <svg class="chevron-icon" viewBox="0 0 8 5" aria-hidden="true">
+            <rect x="0" y="0" width="1" height="1" fill="currentColor"/>
+            <rect x="1" y="1" width="1" height="1" fill="currentColor"/>
+            <rect x="2" y="2" width="1" height="1" fill="currentColor"/>
+            <rect x="1" y="3" width="1" height="1" fill="currentColor"/>
+            <rect x="0" y="4" width="1" height="1" fill="currentColor"/>
+            <rect x="4" y="0" width="1" height="1" fill="currentColor"/>
+            <rect x="5" y="1" width="1" height="1" fill="currentColor"/>
+            <rect x="6" y="2" width="1" height="1" fill="currentColor"/>
+            <rect x="5" y="3" width="1" height="1" fill="currentColor"/>
+            <rect x="4" y="4" width="1" height="1" fill="currentColor"/>
+          </svg>
+        </span>
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="site">
+    <span>&copy; <span id="year"></span> Bharadwaj</span>
+    <a href="mailto:ybharadwaj4@gmail.com">ybharadwaj4@gmail.com</a>
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  (function(){
+    var root = document.documentElement;
+    var toggleBtn = document.getElementById("theme-toggle");
+
+    function currentTheme(){
+      var explicit = root.getAttribute("data-theme");
+      if (explicit) return explicit;
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+
+    function syncToggle(){
+      var isDark = currentTheme() === "dark";
+      toggleBtn.setAttribute("aria-pressed", String(isDark));
+      toggleBtn.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+    }
+
+    syncToggle();
+    toggleBtn.addEventListener("click", function(){
+      var next = currentTheme() === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      syncToggle();
+    });
+  })();
+
+  (function(){
+    var downloadBtn = document.getElementById("download-btn");
+    var label = document.getElementById("download-btn-label");
+    var defaultText = label.textContent;
+    var resetTimer = null;
+
+    downloadBtn.addEventListener("click", function(){
+      label.textContent = "Unavailable right now";
+      clearTimeout(resetTimer);
+      resetTimer = setTimeout(function(){
+        label.textContent = defaultText;
+      }, 2500);
+    });
+  })();
+</script>
+
+</body>
+</html>

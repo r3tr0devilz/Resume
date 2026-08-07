@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Certifications &amp; Badges</title>
+<meta name="description" content="A single place linking to every certification and badge earned." />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" href="style.css" />
+<script>
+  (function(){
+    var stored = localStorage.getItem("theme");
+    if (stored) document.documentElement.setAttribute("data-theme", stored);
+  })();
+</script>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="site">
+    <div class="title-row">
+      <div class="pixel-mark" aria-hidden="true"></div>
+      <h1>CERT&nbsp;LOG</h1>
+    </div>
+    <p class="tagline">Every certification and badge I've earned, in one place. Click any card to verify it directly with the issuer.</p>
+    <p class="owner-line">Maintained by <strong>Bharadwaj</strong> &middot; last updated <time datetime="2026-08-04">Aug 2026</time></p>
+    <nav class="site-nav" aria-label="Site">
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="certifications.html" aria-current="page">Certifications</a>
+        <a class="nav-link" href="resume.html">Resume</a>
+      </div>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Switch to dark mode">
+          <svg class="pixel-icon theme-icon theme-icon--moon" viewBox="0 0 16 16" aria-hidden="true">
+            <rect x="6" y="4" width="4" height="1" fill="currentColor"/>
+            <rect x="5" y="5" width="6" height="1" fill="currentColor"/>
+            <rect x="4" y="6" width="8" height="1" fill="currentColor"/>
+            <rect x="4" y="7" width="8" height="1" fill="currentColor"/>
+            <rect x="4" y="8" width="8" height="1" fill="currentColor"/>
+            <rect x="4" y="9" width="8" height="1" fill="currentColor"/>
+            <rect x="5" y="10" width="6" height="1" fill="currentColor"/>
+            <rect x="6" y="11" width="4" height="1" fill="currentColor"/>
+            <rect class="cut" x="8" y="3" width="3" height="1"/>
+            <rect class="cut" x="7" y="4" width="5" height="1"/>
+            <rect class="cut" x="7" y="5" width="5" height="1"/>
+            <rect class="cut" x="7" y="6" width="5" height="1"/>
+            <rect class="cut" x="8" y="7" width="3" height="1"/>
+          </svg>
+          <svg class="pixel-icon theme-icon theme-icon--sun" viewBox="0 0 16 16" aria-hidden="true">
+            <rect x="6" y="4" width="4" height="1" fill="currentColor"/>
+            <rect x="5" y="5" width="6" height="1" fill="currentColor"/>
+            <rect x="4" y="6" width="8" height="1" fill="currentColor"/>
+            <rect x="4" y="7" width="8" height="1" fill="currentColor"/>
+            <rect x="4" y="8" width="8" height="1" fill="currentColor"/>
+            <rect x="4" y="9" width="8" height="1" fill="currentColor"/>
+            <rect x="5" y="10" width="6" height="1" fill="currentColor"/>
+            <rect x="6" y="11" width="4" height="1" fill="currentColor"/>
+            <rect x="7" y="0" width="2" height="2" fill="currentColor"/>
+            <rect x="7" y="14" width="2" height="2" fill="currentColor"/>
+            <rect x="0" y="7" width="2" height="2" fill="currentColor"/>
+            <rect x="14" y="7" width="2" height="2" fill="currentColor"/>
+            <rect x="2" y="2" width="2" height="2" fill="currentColor"/>
+            <rect x="12" y="2" width="2" height="2" fill="currentColor"/>
+            <rect x="2" y="12" width="2" height="2" fill="currentColor"/>
+            <rect x="12" y="12" width="2" height="2" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="filters" id="filters" role="group" aria-label="Filter certifications by category">
+    <!-- filter buttons are generated from the CATEGORIES list below -->
+  </div>
+
+  <main>
+    <section class="grid" id="cert-grid" aria-label="Certifications">
+      <!-- cards are rendered from CERTIFICATIONS below -->
+    </section>
+    <p class="empty-state" id="empty-state" hidden>No certifications in this category yet.</p>
+  </main>
+
+  <footer class="site">
+    <span>&copy; <span id="year"></span> Bharadwaj</span>
+    <a href="mailto:ybharadwaj4@gmail.com">ybharadwaj4@gmail.com</a>
+  </footer>
+
+</div>
+
+<script>
+  /* =========================================================================
+     EDIT BELOW to add / remove / update certifications.
+     Each entry:
+       name     - certification title, exactly as issued
+       issuer   - organization that issued it
+       date     - "Mon YYYY" issue date (optional - omit to hide the date line)
+       url      - public verification link (Credly, Coursera, issuer page, etc.)
+       category - short tag used for the filter row above
+     ========================================================================= */
+  const CERTIFICATIONS = [
+    {
+      name: "Claude 101",
+      issuer: "Anthropic",
+      url: "https://verify.skilljar.com/c/8rnc3uq3e72z",
+      category: "AI"
+    },
+    {
+      name: "Claude Code 101",
+      issuer: "Anthropic",
+      url: "https://verify.skilljar.com/c/8cvkpqgfc46h",
+      category: "AI"
+    },
+    {
+      name: "Claude Platform 101",
+      issuer: "Anthropic",
+      url: "https://verify.skilljar.com/c/ympr6a4te7fc",
+      category: "AI"
+    },
+    {
+      name: "Introduction to Claude Cowork",
+      issuer: "Anthropic",
+      url: "https://verify.skilljar.com/c/wza6ct5u329k",
+      category: "AI"
+    },
+    {
+      name: "Claude Code in Action",
+      issuer: "Anthropic",
+      url: "https://verify.skilljar.com/c/j94ikp4s6tzk",
+      category: "AI"
+    },
+    {
+      name: "Data Science Specialization (10 Courses)",
+      issuer: "IBM",
+      url: "https://www.coursera.org/account/accomplishments/specialization/certificate/QWCP2YTS3V5A",
+      category: "Data"
+    },
+    {
+      name: "Developing Industrial Internet of Things Specialization (3 Courses)",
+      issuer: "University of Colorado Boulder",
+      url: "https://www.coursera.org/account/accomplishments/specialization/certificate/N5SLT748HTHM",
+      category: "IoT"
+    },
+    {
+      name: "Introduction to Statistics",
+      issuer: "Stanford University",
+      url: "https://coursera.org/share/e7b74495200c30efc3f31c9ba34a0d2a",
+      category: "Data"
+    }
+  ];
+
+  /* ===================================================================== */
+
+  const grid = document.getElementById("cert-grid");
+  const filtersEl = document.getElementById("filters");
+  const emptyState = document.getElementById("empty-state");
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const CATEGORIES = ["All", ...new Set(CERTIFICATIONS.map(c => c.category))];
+  let activeCategory = "All";
+
+  const badgeIconSVG = `
+    <svg class="badge-icon" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+      <rect x="2" y="2" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"/>
+      <rect x="6" y="10" width="2" height="2" fill="currentColor"/>
+      <rect x="8" y="12" width="2" height="2" fill="currentColor"/>
+      <rect x="10" y="10" width="2" height="2" fill="currentColor"/>
+      <rect x="12" y="8" width="2" height="2" fill="currentColor"/>
+      <rect x="14" y="6" width="2" height="2" fill="currentColor"/>
+    </svg>`;
+
+  function renderFilters(){
+    filtersEl.innerHTML = "";
+    CATEGORIES.forEach(cat => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "filter-btn";
+      btn.textContent = cat;
+      btn.setAttribute("aria-pressed", String(cat === activeCategory));
+      btn.addEventListener("click", () => {
+        activeCategory = cat;
+        renderFilters();
+        renderCards();
+      });
+      filtersEl.appendChild(btn);
+    });
+  }
+
+  function renderCards(){
+    const items = CERTIFICATIONS.filter(c => activeCategory === "All" || c.category === activeCategory);
+    grid.innerHTML = "";
+
+    if (items.length === 0){
+      emptyState.hidden = false;
+      return;
+    }
+    emptyState.hidden = true;
+
+    items.forEach(cert => {
+      const card = document.createElement("article");
+      card.className = "card";
+
+      card.innerHTML = `
+        <div class="card-top">
+          ${badgeIconSVG}
+          <span class="cert-tag">${escapeHTML(cert.category)}</span>
+        </div>
+        <h2 class="cert-name">${escapeHTML(cert.name)}</h2>
+        <p class="cert-issuer">${escapeHTML(cert.issuer)}</p>
+        ${cert.date ? `<p class="cert-date">${escapeHTML(cert.date)}</p>` : ``}
+        ${cert.placeholder ? `<p class="placeholder-flag">Placeholder — not a real credential</p>` : ``}
+        <a class="verify-link" href="${escapeAttr(cert.url)}" target="_blank" rel="noopener noreferrer">
+          Verify
+        </a>
+      `;
+      grid.appendChild(card);
+    });
+  }
+
+  function escapeHTML(str){
+    const div = document.createElement("div");
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function escapeAttr(str){
+    return String(str).replace(/"/g, "&quot;");
+  }
+
+  renderFilters();
+  renderCards();
+
+  (function(){
+    var root = document.documentElement;
+    var toggleBtn = document.getElementById("theme-toggle");
+
+    function currentTheme(){
+      var explicit = root.getAttribute("data-theme");
+      if (explicit) return explicit;
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+
+    function syncToggle(){
+      var isDark = currentTheme() === "dark";
+      toggleBtn.setAttribute("aria-pressed", String(isDark));
+      toggleBtn.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+    }
+
+    syncToggle();
+    toggleBtn.addEventListener("click", function(){
+      var next = currentTheme() === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      syncToggle();
+    });
+  })();
+</script>
+
+</body>
+</html>
